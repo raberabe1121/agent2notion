@@ -56,6 +56,23 @@ paths:
                       price: 49500
                       rating: 4.7
                       timestamp: "2025-11-12T10:00:00Z"
-      responses:
-        '200':
-          description: Successful import
+/extract/amazon:
+  post:
+    summary: Extract product info from Amazon product URL
+    operationId: extract_amazon
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              url:
+                type: string
+    responses:
+      '200':
+        description: Product info extracted
+        content:
+          application/json:
+            schema:
+              type: object
