@@ -1,13 +1,15 @@
-openapi: 3.1.1
+openapi: 3.1.0
 info:
   title: Agent2Notion API
-  version: "1.0.0"
+  version: 1.0.0
+
 servers:
-  - url: https://agent2notion-api.iksolaris17.workers.dev/
+  - url: https://agent2notion-api.iksolaris17.workers.dev
+
 paths:
   /parse:
     post:
-      summary: Parse Agent JSON
+      summary: Parse raw product data
       operationId: parse
       requestBody:
         required: true
@@ -19,11 +21,12 @@ paths:
                 text:
                   type: string
       responses:
-        '200':
-          description: Parsed structured data
+        "200":
+          description: Parsed data
+
   /notion/import:
     post:
-      summary: Import structured data into Notion
+      summary: Import product data into Notion
       operationId: import_to_notion
       requestBody:
         required: true
@@ -46,33 +49,11 @@ paths:
                       timestamp:
                         type: string
                         format: date-time
-                    required:
-                      - product
-                      - price
-                      - rating
-                      - timestamp
-                    example:
-                      product: "Sony WH-1000XM5"
-                      price: 49500
-                      rating: 4.7
-                      timestamp: "2025-11-12T10:00:00Z"
-/extract/amazon:
-  post:
-    summary: Extract product info from Amazon product URL
-    operationId: extract_amazon
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              url:
-                type: string
-    responses:
-      '200':
-        description: Product info extracted
-        content:
-          application/json:
-            schema:
-              type: object
+                  required:
+                    - product
+                    - price
+                    - rating
+                    - timestamp
+      responses:
+        "200":
+          description: Imported
