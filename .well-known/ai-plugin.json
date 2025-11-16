@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Agent2Notion",
+  "name_for_model": "agent2notion",
+  "description_for_human": "Sync Agent outputs to Notion database automatically.",
+  "description_for_model": "Converts Agent JSON outputs into Notion database entries.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://your-domain.com/.well-known/openapi.yaml"
+  },
+  "logo_url": "https://your-domain.com/logo.png",
+  "contact_email": "support@your-domain.com",
+  "legal_info_url": "https://your-domain.com/legal"
+}

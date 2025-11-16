@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: Agent2Notion API
+  version: "1.0.0"
+servers:
+  - url: https://your-domain.com
+paths:
+  /parse:
+    post:
+      summary: Parse Agent JSON
+      operationId: parse
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+      responses:
+        '200':
+          description: Parsed structured data
+  /notion/import:
+    post:
+      summary: Import structured data into Notion
+      operationId: import_to_notion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                records:
+                  type: array
+                  items:
+                    type: object
+      responses:
+        '200':
+          description: Successful import
