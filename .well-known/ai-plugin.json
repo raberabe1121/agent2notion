@@ -7,9 +7,9 @@
   "auth": { "type": "none" },
   "api": {
     "type": "openapi",
-    "url": "https://your-domain.com/.well-known/openapi.yaml"
+    "url": "https://agent2notion.pages.dev/.well-known/openapi.yaml"
   },
-  "logo_url": "https://your-domain.com/logo.png",
-  "contact_email": "support@your-domain.com",
-  "legal_info_url": "https://your-domain.com/legal"
+  "logo_url": "https://agent2notion.pages.dev/logo.png",
+  "contact_email": "5310056@alumni.tus.ac.jp",
+  "legal_info_url": "https://agent2notion.pages.dev/legal"
 }
