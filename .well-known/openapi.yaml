@@ -3,7 +3,7 @@ info:
   title: Agent2Notion API
   version: "1.0.0"
 servers:
-  - url: https://agent2notion.pages.dev
+  - url: https://agent2notion-api.iksolaris17.workers.dev/
 paths:
   /parse:
     post:
