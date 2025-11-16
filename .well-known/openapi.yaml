@@ -36,6 +36,26 @@ paths:
                   type: array
                   items:
                     type: object
+                    properties:
+                      product:
+                        type: string
+                      price:
+                        type: number
+                      rating:
+                        type: number
+                      timestamp:
+                        type: string
+                        format: date-time
+                    required:
+                      - product
+                      - price
+                      - rating
+                      - timestamp
+                    example:
+                      product: "Sony WH-1000XM5"
+                      price: 49500
+                      rating: 4.7
+                      timestamp: "2025-11-12T10:00:00Z"
       responses:
         '200':
           description: Successful import
